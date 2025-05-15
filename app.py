@@ -18,7 +18,25 @@ names = [
 ]
 
 # Cargar modelo
-model = load_model('best_model3.keras')
+import gdown
+
+
+# ID de tu archivo de Google Drive
+file_id = "1M_LF862ZvnFJeGDFr9egv0hiXBu_f3DE"
+
+# Enlace directo (convertido)
+url = f"https://drive.google.com/uc?id={file_id}"
+
+# Nombre temporal del archivo descargado
+model_path = "best_model.keras"
+
+# Descargar el modelo desde Drive
+gdown.download(url, model_path, quiet=False)
+
+# Cargar el modelo descargado
+model = load_model(model_path)
+print("✅ Modelo cargado correctamente desde Google Drive")
+
 
 # Función para cargar y preprocesar la imagen
 def load_and_preprocess_image(image_path, target_size=(224, 224)):
