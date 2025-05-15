@@ -34,7 +34,7 @@ model_path = "best_model.keras"
 gdown.download(url, model_path, quiet=False)
 
 # Cargar el modelo descargado
-modelo = load_model(model_path)
+model = load_model(model_path)
 print("✅ Modelo cargado correctamente desde Google Drive")
 
 
