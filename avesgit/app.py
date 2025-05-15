@@ -18,7 +18,7 @@ names = [
 ]
 
 # Cargar modelo
-model = load_model('best_model3.keras')
+model = load_model('./best_model3.keras')
 
 # Función para cargar y preprocesar la imagen
 def load_and_preprocess_image(image_path, target_size=(224, 224)):
