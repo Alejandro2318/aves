@@ -8,3 +8,4 @@ matplotlib
 pillow
 openpyxl
 requests
+gdown
